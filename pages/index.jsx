@@ -49,7 +49,7 @@ const Home = () => {
 
         <Fragment>
 
-            <div className="p-8">
+            <div className="p-4 md:p-8">
 
                 <Head>
                     <title>Mark Rise</title>
@@ -64,13 +64,13 @@ const Home = () => {
 
                 <div className="my-24">
 
-                    <h2 className="font-medium text-center text-2xl text-slate-900">If you want to shine, find the brightest star in your mind.</h2>
+                    <h2 className="font-medium text-center text-xl md:text-2xl text-slate-900">If you want to shine, find the brightest star in your mind.</h2>
 
                 </div>
 
                 <div className="p-10 bg-black rounded-md text-center">
 
-                    <h2 className="font-light text-7xl text-amber-400 mb-6">Minimal Illustrations</h2>
+                    <h2 className="font-light text-4xl md:text-7xl text-amber-400 mb-6">Minimal Illustrations</h2>
 
                     <p className="font-medium text-base text-white mb-8">FLAT DESIGN STYLE</p>
 
@@ -80,23 +80,26 @@ const Home = () => {
 
                 </div>
 
-                <div className="my-24 grid grid-cols-4 gap-6">
+                <div className="my-24 grid grid-cols-2 md:grid-cols-4 gap-6">
 
                     {minimal.map(item => (
-                        <motion.img loading="lazy" className="rounded-md cursor-pointer" alt="illustration" key={item.id} src={item.uri} layoutId={item.id} onClick={() => setSelectedId({ id: item.id, uri: item.uri })} />
+                        <motion.img whileHover={{ scale: 1.1 }}
+                        whileTap={{
+                          scale: 0.8,
+                        }} loading="lazy" className="rounded-md cursor-pointer" alt="illustration" key={item.id} src={item.uri} layoutId={item.id} onClick={() => setSelectedId({ id: item.id, uri: item.uri })} />
                     ))}
 
                 </div>
 
                 <div className="mb-24">
 
-                    <h2 className="font-medium text-center text-2xl text-slate-900">Art is like a game. There is always the next level.</h2>
+                    <h2 className="font-medium text-center text-xl md:text-2xl text-slate-900">Art is like a game. There is always the next level.</h2>
 
                 </div>
 
                 <div className="p-10 bg-amber-400 rounded-md text-center">
 
-                    <h2 className="font-light text-7xl text-slate-900 mb-6">Abstract Illustrations</h2>
+                    <h2 className="font-light text-4xl md:text-7xl text-slate-900 mb-6">Abstract Illustrations</h2>
 
                     <p className="font-medium text-base text-white mb-8">SIMPLE GEOMETRIC FORMS</p>
 
@@ -106,23 +109,26 @@ const Home = () => {
 
                 </div>
 
-                <div className="my-24 grid grid-cols-4 gap-6">
+                <div className="my-24 grid grid-cols-2 md:grid-cols-4 gap-6">
 
                     {abstract.map(item => (
-                        <motion.img loading="lazy" className="rounded-md cursor-pointer" alt="illustration" key={item.id} src={item.uri} layoutId={item.id} onClick={() => setSelectedId({ id: item.id, uri: item.uri })} />
+                        <motion.img whileHover={{ scale: 1.1 }}
+                        whileTap={{
+                          scale: 0.8,
+                        }} loading="lazy" className="rounded-md cursor-pointer" alt="illustration" key={item.id} src={item.uri} layoutId={item.id} onClick={() => setSelectedId({ id: item.id, uri: item.uri })} />
                     ))}
 
                 </div>
 
                 <div className="mb-24">
 
-                    <h2 className="font-medium text-center text-2xl text-slate-900">The artist is a bridge between heaven and earth.</h2>
+                    <h2 className="font-medium text-center text-xl md:text-2xl text-slate-900">The artist is a bridge between heaven and earth.</h2>
 
                 </div>
 
                 <div className="p-10 bg-black rounded-md text-center">
 
-                    <h2 className="font-light text-7xl text-amber-400 mb-6">NFT Collection</h2>
+                    <h2 className="font-light text-4xl md:text-7xl text-amber-400 mb-6">NFT Collection</h2>
 
                     <p className="font-medium text-base text-white mb-8">THE FACES OF GOD</p>
 
@@ -132,10 +138,13 @@ const Home = () => {
 
                 </div>
 
-                <div className="my-24 grid grid-cols-4 gap-6">
+                <div className="my-24 grid grid-cols-2 md:grid-cols-4 gap-6">
 
                     {nfts.map(item => (
-                        <motion.img loading="lazy" className="rounded-md cursor-pointer" alt="illustration" key={item.id} src={item.uri} layoutId={item.id} onClick={() => setSelectedId({ id: item.id, uri: item.uri })} />
+                        <motion.img whileHover={{ scale: 1.1 }}
+                        whileTap={{
+                          scale: 0.8,
+                        }} loading="lazy" className="rounded-md cursor-pointer" alt="illustration" key={item.id} src={item.uri} layoutId={item.id} onClick={() => setSelectedId({ id: item.id, uri: item.uri })} />
                     ))}
 
                 </div>
@@ -146,8 +155,8 @@ const Home = () => {
 
             <AnimatePresence>
                 {selectedId && (
-                    <motion.div onClick={() => setSelectedId(null)} className="flex items-center justify-center fixed left-0 top-0 w-full h-full bg-slate-900/90" layoutId={selectedId}>
-                        <motion.img className="rounded-md w-4/12" src={selectedId.uri} layoutId={selectedId.id} />
+                    <motion.div onClick={() => setSelectedId(null)} className="flex z-40 items-center justify-center fixed left-0 top-0 w-full h-full bg-slate-900/90" layoutId={selectedId}>
+                        <motion.img className="rounded-md w-4/5 md:w-4/12" src={selectedId.uri} layoutId={selectedId.id} />
                     </motion.div>
                 )}
             </AnimatePresence>

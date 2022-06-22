@@ -8,7 +8,7 @@ const Prints = () => {
 
     return (
 
-        <div className="p-8">
+        <div className="p-4 md:p-8">
 
             <Head>
                 <title>Prints - Mark Rise</title>

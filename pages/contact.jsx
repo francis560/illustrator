@@ -7,7 +7,7 @@ const Contact = () => {
 
     return (
 
-        <div className="p-8">
+        <div className="p-4 md:p-8">
 
             <Head>
                 <title>Contact - Mark Rise</title>
@@ -18,7 +18,7 @@ const Contact = () => {
 
             <Navbar />
 
-            <form className="w-full my-24 px-20">
+            <form className="w-full my-24 md:px-20">
                 <div className="flex flex-wrap -mx-3 mb-6">
                     <div className="w-full px-3">
                         <label className="block uppercase tracking-wide text-slate-700 text-xs font-bold mb-2" htmlFor="grid-password">

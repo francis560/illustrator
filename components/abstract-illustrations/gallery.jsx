@@ -27,18 +27,21 @@ const Gallery = () => {
     return (
         <Fragment>
 
-            <div className="my-24 grid grid-cols-4 gap-6">
+            <div className="my-24 grid grid-cols-2 md:grid-cols-4 gap-6">
 
                 {abstract.map(item => (
-                    <motion.img loading="lazy" className="rounded-md cursor-pointer" alt="illustration" key={item.id} src={item.uri} layoutId={item.id} onClick={() => setSelectedId({ id: item.id, uri: item.uri })} />
+                    <motion.img whileHover={{ scale: 1.1 }}
+                    whileTap={{
+                      scale: 0.8,
+                    }} loading="lazy" className="rounded-md cursor-pointer" alt="illustration" key={item.id} src={item.uri} layoutId={item.id} onClick={() => setSelectedId({ id: item.id, uri: item.uri })} />
                 ))}
 
             </div>
             
             <AnimatePresence>
                 {selectedId && (
-                    <motion.div onClick={() => setSelectedId(null)} className="flex items-center justify-center fixed left-0 top-0 w-full h-full bg-slate-900/90" layoutId={selectedId}>
-                        <motion.img className="rounded-md w-4/12" src={selectedId.uri} layoutId={selectedId.id} />
+                    <motion.div onClick={() => setSelectedId(null)} className="flex z-40 items-center justify-center fixed left-0 top-0 w-full h-full bg-slate-900/90" layoutId={selectedId}>
+                        <motion.img className="rounded-md w-4/5 md:w-4/12" src={selectedId.uri} layoutId={selectedId.id} />
                     </motion.div>
                 )}
             </AnimatePresence>

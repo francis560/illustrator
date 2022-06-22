@@ -8,7 +8,7 @@ const AbstractIllustrations = () => {
 
     return (
         
-        <div className="p-8">
+        <div className="p-4 md:p-8">
 
             <Head>
                 <title>Abstract Illustrations - Mark Rise</title>
