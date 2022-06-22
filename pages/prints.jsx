@@ -1,15 +1,13 @@
 import Head from "next/head";
-import Gallery from "../components/minimal-illustrations/gallery";
 import Navbar from "../components/navbar";
+import Gallery from "../components/prints/gallery";
 
 
-const MinimalIllustrations = () => {
+const Prints = () => {
 
     return (
-        
-        <div className="p-8">
 
-            <Navbar />
+        <div className="p-8">
 
             <Head>
                 <title>Illustrator</title>
@@ -18,9 +16,12 @@ const MinimalIllustrations = () => {
                 <link rel="icon" href="/logo.svg" />
             </Head>
 
-            <div className="bg-cover-minimal-illustrations h-screen rounded-t-md bg-fixed"></div>
+            <Navbar />
+
+            <div className="bg-cover-prints-illustrations h-screen rounded-t-md bg-fixed"></div>
             <div className="rounded-b-md p-4 bg-black">
-                <p className="font-medium text-lg text-center text-amber-400">MINIMAL ILLUSTRATIONS</p>
+                <p className="font-normal text-lg text-center text-amber-400 mb-2">Official Prints</p>
+                <p className="font-medium text-xs text-center text-white">NUMBERED LIMITED EDITIONS</p>
             </div>
 
             <Gallery />
@@ -32,4 +33,4 @@ const MinimalIllustrations = () => {
 }
 
 
-export default MinimalIllustrations;
+export default Prints;

@@ -23,3 +23,15 @@
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+.bg-cover-prints-illustrations {
+    background-image: url("/prints-cover.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bg-cover-nft-illustrations {
+    background-image: url("/nft-cover.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}

@@ -5,7 +5,7 @@ const Navbar = () => {
 
     return (
 
-        <nav className="rounded-md bg-black mb-8 sticky top-0 p-4 text-center">
+        <nav className="rounded-md bg-black mb-8 sticky top-2 p-4 text-center">
 
             <Link href="/">
                 <img className="cursor-pointer mx-auto w-8 mb-4" src="/logo.svg" alt="" />
@@ -15,6 +15,10 @@ const Navbar = () => {
 
                 <Link href="/">
                     <a className="text-white text-sm font-normal">Home</a>
+                </Link>
+
+                <Link href="/prints">
+                    <a className="text-white text-sm font-normal">Prints</a>
                 </Link>
 
                 <Link href="/nft">
