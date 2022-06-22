@@ -21,7 +21,7 @@ const Contact = () => {
             <form className="w-full my-24 px-20">
                 <div className="flex flex-wrap -mx-3 mb-6">
                     <div className="w-full px-3">
-                        <label className="block uppercase tracking-wide text-slate-700 text-xs font-bold mb-2" for="grid-password">
+                        <label className="block uppercase tracking-wide text-slate-700 text-xs font-bold mb-2" htmlFor="grid-password">
                             Name
                         </label>
                         <input placeholder="Name" className="appearance-none block w-full bg-slate-200 text-slate-700 border border-slate-200 rounded-md py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-slate-500" id="name" type="text" />
@@ -29,7 +29,7 @@ const Contact = () => {
                 </div>
                 <div className="flex flex-wrap -mx-3 mb-6">
                     <div className="w-full px-3">
-                        <label className="block uppercase tracking-wide text-slate-700 text-xs font-bold mb-2" for="grid-password">
+                        <label className="block uppercase tracking-wide text-slate-700 text-xs font-bold mb-2" htmlFor="grid-password">
                             Email
                         </label>
                         <input placeholder="Email" className="appearance-none block w-full bg-slate-200 text-slate-700 border border-slate-200 rounded-md py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-slate-500" id="email" type="email" />
@@ -37,7 +37,7 @@ const Contact = () => {
                 </div>
                 <div className="flex flex-wrap -mx-3 mb-6">
                     <div className="w-full px-3">
-                        <label className="block uppercase tracking-wide text-slate-700 text-xs font-bold mb-2" for="grid-password">
+                        <label className="block uppercase tracking-wide text-slate-700 text-xs font-bold mb-2" htmlFor="grid-password">
                             Message
                         </label>
                         <textarea className=" no-resize appearance-none block w-full bg-slate-200 text-slate-700 border border-slate-200 rounded-md py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-slate-500 h-48 resize-none" id="message"></textarea>
