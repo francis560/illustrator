@@ -1,0 +1,5 @@
+.bg-cover {
+    background-image: url("/cover.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
